@@ -2,13 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebSocket Chat test</title>
+    <script type="module" src="./client.mjs"></script>
   </head>
   <body>
-    <h1>WebSocket test</h1>
-    <p>Sends a ping every five seconds.</p>
-    <button id="demo-button">Send "Hello World"</button>
-    <div id="output"></div>
-    <script type="module" src="./client.mjs"></script>
+    <h1>WebSocket Chat test</h1>
+    <aside>
+      <h2>Users online</h2>
+      <ul id="users"></ul>
+    </aside>
+    <main>
+      <div id="conversation"></div>
+      <form id="form">
+        <input name="message" placeholder="Send message" autocomplete="off" />
+        <button>Send</button>
+      </form>
+    </main>
+    <template id="user"><li></li></template>
+    <template id="message"
+      ><div>
+        <span></span>
+        <p></p></div
+    ></template>
   </body>
 </html>
